@@ -25,11 +25,11 @@ function cdConvert() {
     if (opt7.checked) cv = cv.replace(/&#169/g, "&copy;");
     if (opt8.checked) cv = cv.replace(/&#174/g, "&reg;");
     if (cv.lastIndexOf('\n') != -1 || cv.length > 40) {
-        cv = cv.replace(/^/, "<i rel=\"pre\">");
+        cv = cv.replace(/^/, "");
     } else {
-        cv = cv.replace(/^/, "<i rel=\"code\">");
+        cv = cv.replace(/^/, "");
     }
-    cv = cv.replace(/$/, "</i>");
+    cv = cv.replace(/$/, "");
     ctarea.value = cv;
     ctarea.focus();
     ctarea.select();
